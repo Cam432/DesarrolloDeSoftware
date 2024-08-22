@@ -1,0 +1,10 @@
+¡Bueno días!
+
+Para comprobar la página haga clic en:
+
+	trabajohtml2024.html
+
+Y se abrirá en su navegador principal.
+
+En el caso de querer ver el código, abra el mismo archivo desde su IDE de confianza
+ 

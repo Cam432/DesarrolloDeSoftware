@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo De HTML</title>
+</head>
+<body>
+    <header>
+        <h1>Trabajo Práctico HTML</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#seccion1">Encabezados y Propiedades del Texto</a></li>
+            <li><a href="#seccion2">Divisiones y Agrupación de Contenido</a></li>
+            <li><a href="#seccion3">Enlaces y Listas</a></li>
+            <li><a href="#seccion4">Elementos Multimedia</a></li>
+            <li><a href="#seccion5">Tablas</a></li>
+            <li><a href="#seccion6">Formulario</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <article>
+            <h1>1. Estructura Básica del Documento HTML</h1>
+            <p>Este documento HTML tiene una estructura básica que incluye la declaración de DOCTYPE, etiquetas de metadatos y un título.</p>
+        </article>
+
+        <article id="seccion1">
+            <h1>2. Encabezados y Propiedades del Texto</h1>
+            <h2>Ejemplo de encabezado H2</h2>
+            <h3>Ejemplo de encabezado H3</h3>
+            <h4>Ejemplo de encabezado H4</h4>
+            <h5>Ejemplo de encabezado H5</h5>
+            <h6>Ejemplo de encabezado H6</h6>
+            <p><b>Ejemplo de texto en negrita</b></p>
+            <p><i>Ejemplo de texto en cursiva</i></p>
+            <p><u>Ejemplo de texto subrayado</u></p>
+            <p style="color: red; font-family: Arial;">Ejemplo de texto en rojo con la fuente Arial.</p>
+            <p>Ejemplo de <span style="color: blue; font-weight: bold;">texto destacado en azul y negrita</span> usando un span.</p>
+        </article>
+
+        <article id="seccion2">
+            <h2>3. Divisiones y Agrupación de Contenido</h2>
+            <div>
+                <h3>Sección 1</h3>
+                <p>Contenido de la primera sección agrupada en un div.</p>
+            </div>
+            <div>
+                <h3>Sección 2</h3>
+                <p>Contenido de la segunda sección agrupada en un div.</p>
+            </div>
+        </article>
+
+        <article id="seccion3">
+            <h2>4. Enlaces y Listas</h2>
+            <p>Visita nuestro <a href="https://www.sitioweb.com" target="_blank">Sitio web</a> para más información.</p>
+            <p>Enlaces Internos:</p>
+            <ul>
+                <li><a href="#seccion1">Encabezados y Propiedades del Texto</a></li>
+                <li><a href="#seccion2">Divisiones y Agrupación de Contenido</a></li>
+                <li><a href="#seccion3">Enlaces y Listas</a></li>
+                <li><a href="#seccion4">Elementos Multimedia</a></li>
+                <li><a href="#seccion5">Tablas</a></li>
+                <li><a href="#seccion6">Formulario</a></li>
+            </ul>
+            <p>Lista desordenada:</p>
+            <ul>
+                <li>Primer ítem de una lista desordenada</li>
+                <li>Segundo ítem de una lista desordenada</li>
+            </ul>
+            <p>Lista ordenada:</p>
+            <ol>
+                <li>Primer ítem de una lista ordenada</li>
+                <li>Segundo ítem de una lista ordenada</li>
+            </ol>
+        </article>
+
+        <article id="seccion4">
+            <h2>5. Elementos Multimedia</h2>
+            <div>
+                <img src="Dinosaurio_en_moto.jpg" alt="Dinosaurio en moto" width="200" height="200">
+                <video src="SAMSUNG Pure Color.mp4" width="400" height="300" controls></video>
+                <audio src="SIAMÉS - The Wolf.mp3" controls></audio>
+            </div>
+        </article>
+
+        <article id="seccion5">
+            <h2>6. Tablas</h2>
+            <table style="border-collapse: separate; border-spacing: 2px; border: 2px solid black;">
+                <thead>
+                    <tr>
+                        <th style="border: 1px solid black; padding: 5px;">Columna 1</th>
+                        <th style="border: 1px solid black; padding: 5px;">Columna 2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="border: 1px solid black; padding: 5px;">Dato 1</td>
+                        <td style="border: 1px solid black; padding: 5px;">Dato 2</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid black; padding: 5px;">Dato 3</td>
+                        <td style="border: 1px solid black; padding: 5px;">Dato 4</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+
+        <article id="seccion6">
+            <h2>7. Formularios</h2>
+            <form action="#" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Trabajo HTML. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
