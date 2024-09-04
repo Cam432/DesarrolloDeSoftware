@@ -1,0 +1,184 @@
+/* Acá hago los estilos generales para el body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #bfdbe0;
+}
+
+/* Acá hago los estilos generales para el sectión */
+section {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px rgb(82, 82, 82);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* Acá trabajamos la cabecera */
+header {
+    background-color: #535050;
+    color: white;
+    text-align: center;
+    /* Centra el texto en el cuerpo */
+}
+
+header p {
+    margin: 0;
+    /*Saco los margenes de p por defecto */
+    font-size: 14px;
+    /* Cambia el tamaño del texto del título */
+    color: #fff;
+    /* Cambia el color del texto del título */
+    font-weight: bold;
+    /* texto negrita */
+    font-style: Monaco;
+    /* Cambia el estilo del texto */
+    padding: 10px;
+}
+
+/* A partir de este punto utilizo clases para definir estilos */
+.subrayado_capitalizado {
+    text-decoration: underline;
+    font-size: 14px;
+    text-transform: capitalize;
+}
+
+.caja_de_cita {
+    background-color: rgb(216, 210, 210);
+    border-left: 5px solid rgb(112, 109, 109);
+    /*solid es por el tipo de linea*/
+    color: rgb(112, 109, 109);
+    margin: 0;
+}
+
+.texto_de_cita {
+    padding: 10px;
+    padding-left: 15px;
+    font-style: italic;
+    font-size: 12px;
+}
+
+.caja {
+    border: 2px solid rgb(58, 57, 57);
+    border-radius: 5px;
+    background-color: rgb(240, 240, 240);
+    box-shadow: 3px 3px 3px rgb(82, 82, 82);
+}
+
+.caja_texto {
+    padding-left: 15px;
+    color: rgb(102, 101, 101);
+    font-size: 12px;
+}
+
+.otra_caja {
+    margin-top: 10px;
+    border: 3px solid rgb(58, 57, 57);
+    border-radius: 5px;
+    background-color: rgb(238, 173, 157);
+    box-shadow: 3px 3px 3px rgb(82, 82, 82);
+}
+
+.relativo {
+    position: relative;
+    background-color: rgb(152, 205, 206);
+    top: 0;
+    left: 0;
+    font-size: 12px;
+    padding: 5px;
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+
+.absoluto {
+    position: absolute;
+    background-color: darkslategrey;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    border-radius: 4px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.grid_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.grid_item {
+    background-color: cornflowerblue;
+    border-radius: 5px;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+
+}
+
+/* En la parte de animaciones tuve que declarar el circulo que se desplazaba como absoluto y agregarle un 
+top margin para que no se superponga con el cuadrado*/
+
+.animacion {
+    background-color: crimson;
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+}
+
+.animacion:hover {
+    animation: hovercubo 1s linear;
+}
+
+.mover {
+    margin-top: 120px;
+    position: absolute;
+    background-color: green;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display:inline-block;
+    animation: moverizqder 5s linear infinite;
+    
+}
+
+/* los porcentajes hacen referencia a el inicio, mitad y final de la animación.*/
+
+@keyframes moverizqder {
+    0% {
+        left: 0px;
+    }
+    50% {
+        left: 50%;
+    }
+    100% {
+        left: 0px;
+    }
+}
+
+@keyframes hovercubo {
+    0% {
+        background-color: crimson;
+    }
+    100% {
+        background-color: dodgerblue;
+    }
+}
+
+@media (width <=768px) {
+
+    /*4.5  Media Queries en CSS*/
+    body {
+        background-color: rgb(218, 159, 218);
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+
+}

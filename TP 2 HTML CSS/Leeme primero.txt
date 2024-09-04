@@ -1,0 +1,7 @@
+Para ejecutar el programa haga click en tp2.html en su navegador.
+
+Cada uno de los puntos están comentados y marcados una vez abriendo
+ambos archivos en visual code o similares.
+
+
+
