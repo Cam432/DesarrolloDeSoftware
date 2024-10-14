@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body>
+      <h1>Trabajo practico Javascript</h1>
+
+      <!-- cambair color elementos -->
+
+      <button onclick="cambiarColor()">Cambiar color</button>
+      <p>Texto 1</p>
+      <p>Texto 2</p>
+      <p>Texto 3</p>
+
+      <script>
+          function cambiarColor() {
+              document.querySelectorAll("p").forEach(p => {
+                  p.style.color = "blue";
+              });
+          }
+      </script>
+
+      <!-- alerta -->
+
+      <form onsubmit="mostrarAlerta(event)">
+          <input type="text" id="campoTexto" />
+          <button type="submit">Enviar</button>
+      </form>
+
+      <script>
+          function mostrarAlerta(event) {
+              event.preventDefault();
+              alert(document.getElementById("campoTexto").value);
+          }
+      </script>
+
+      <!-- lista -->
+
+      <ul>
+          <li>Elemento 1</li>
+          <li>Elemento 2</li>
+          <li>Elemento 3</li>
+          <li>Elemento 4</li>
+      </ul>
+
+      <script>
+          document.querySelectorAll("li").forEach((item) => {
+              item.addEventListener("click", () => {
+                  console.log(item.textContent);
+              });
+          });
+      </script>
+
+      <!-- campo de texto y botones -->
+
+      <input type="text" id="campoTexto" placeholder="Escribe algo aquí" />
+      <button id="deshabilitarBtn">Deshabilitar</button>
+      <button id="habilitarBtn">Habilitar</button>
+
+      <script>
+          const campoTexto = document.getElementById("campoTexto");
+          const deshabilitarBtn = document.getElementById("deshabilitarBtn");
+          const habilitarBtn = document.getElementById("habilitarBtn");
+
+          // Función para deshabilitar el campo de texto
+          deshabilitarBtn.addEventListener("click", () => {
+              campoTexto.disabled = true;
+              campoTexto.style.backgroundColor = "#ccc"; // Cambia el estilo para indicar que está deshabilitado
+          });
+
+          // Función para habilitar el campo de texto
+          habilitarBtn.addEventListener("click", () => {
+              campoTexto.disabled = false;
+              campoTexto.style.backgroundColor = ""; // Restaura el estilo original
+          });
+      </script>
+
+
+      <!-- guardar correo -->
+
+      <form onsubmit="guardarCorreo(event)">
+          <input type="email" id="correo" placeholder="Correo electrónico" />
+          <button type="submit">Guardar</button>
+      </form>
+      <div id="correoGuardado"></div>
+      <button onclick="eliminarCorreo()">Eliminar correo</button>
+
+      <script>
+          document.addEventListener("DOMContentLoaded", () => {
+              let correo = localStorage.getItem("correo");
+              if (correo) {
+                  document.getElementById("correoGuardado").innerText = correo;
+              }
+          });
+
+          function guardarCorreo(event) {
+              event.preventDefault();
+              let correo = document.getElementById("correo").value;
+              localStorage.setItem("correo", correo);
+              document.getElementById("correoGuardado").innerText = correo;
+          }
+
+          function eliminarCorreo() {
+              localStorage.removeItem("correo");
+              document.getElementById("correoGuardado").innerText = "";
+          }
+      </script>
+
+
+  </body>
+</html>
