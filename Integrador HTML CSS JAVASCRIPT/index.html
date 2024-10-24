@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto Final</title>
+    <!--FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!--ICONS-->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <!---->
+  </head>
+  <body>
+    <!--HEADER-->
+    <header>
+      <div class="container_header_principal">
+        <div class="container_header_content">
+          <div class="header_search">
+            <input class="input_header" id="inputHeader" type="text" placeholder="Ingrese un elemento">
+            <button class="buttonSearch" id="buttonSearch">Buscar <span class="material-symbols-outlined">search</span></button>
+          </div>
+          <div>
+            <button class="header_buttonAdd" id="buttonAddElement">Agregar elemento <span class="material-symbols-outlined">
+              add_box
+              </span></button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--MAIN-->
+    <main>
+      <div class="container_view">
+        <aside class="listAside">
+          <h2>Categorías
+            <span class="material-symbols-outlined">
+              sort
+              </span></h2>
+            <ul id="listFilter"></ul>
+        </aside>
+        <!--store-->
+        <div class="store" id="storeContainer">
+        </div>
+      </div>
+      <!--POPUP-->
+      <div class="popUpContainer_principal" id="modalPopUp">
+        <div class="popUpContainer">
+          <div class="containerTitlePopUp">
+            <h1>Agregar o modificar un producto</h1>
+          </div>
+          <div class="containerInputs_popUp">
+            <input type="text" id="nombre" placeholder="Ingrese un nombre">
+            <input type="text" placeholder="Ingrese una imagen" id="img">
+            <input type="number" placeholder="Precio" id="precio" value="0">
+            <select id="categoria">
+              <option>Seleccione una categoría</option>
+              <option>Gaseosas</option>
+              <option>Hamburguesas</option>
+              <option>Papas</option>
+            </select>
+          </div>
+          <div class="containerButtonsPopUp">
+            <button class="buttonPopUp cancel" id="cancelButton">Cancelar</button>
+            <button class="buttonPopUp accept" id="acceptButton">Aceptar</button>
+            <button class="buttonPopUp delete" id="deleteButton">Eliminar</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!--JAVASCRIPT-->
+    <script src="./main.js" type="module"></script>
+  </body>
+</html>
